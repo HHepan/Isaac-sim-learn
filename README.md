@@ -11,7 +11,7 @@ sudo docker pull nvcr.io/nvidia/isaac-sim:5.1.0
 
 ## 2. 构建启动脚本与配置挂载目录
 
-本仓库根目录下创建启动脚本 `start_issac.sh`，内容参考如下：
+本仓库根目录下创建启动脚本 `start-isaac.sh`，内容参考如下：
 
 ```bash
 sudo docker run --name {容器名称} --entrypoint bash -it --gpus all -e "ACCEPT_EULA=Y" --rm --network=host --user root \
