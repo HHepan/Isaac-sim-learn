@@ -41,9 +41,17 @@ sudo docker run --name {容器名称} --entrypoint bash -it --gpus all -e "ACCEP
 
 ## 3. 进入 Isaac Sim 容器
 
+首次使用前需要为启动脚本赋予执行权限：
+
+```bash
+chmod +x start-isaac.sh
+```
+
+随后执行：
+
 ```bash
 cd Isaac-sim-learn
-./start_issac.sh
+./start-isaac.sh
 ```
 
 > 进入容器后默认处于 `/isaac-sim` 目录下。
