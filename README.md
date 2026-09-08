@@ -11,10 +11,10 @@ sudo docker pull nvcr.io/nvidia/isaac-sim:5.1.0
 
 ## 2. 构建启动脚本与配置挂载目录
 
-将 `legged_sim/start_issac.sh` 复制到本仓库根目录下，命名为 `start_issac.sh`，内容参考如下：
+本仓库根目录下创建启动脚本 `start_issac.sh`，内容参考如下：
 
 ```bash
-sudo docker run --name isaac-sim --entrypoint bash -it --gpus all -e "ACCEPT_EULA=Y" --rm --network=host --user root \
+sudo docker run --name {容器名称} --entrypoint bash -it --gpus all -e "ACCEPT_EULA=Y" --rm --network=host --user root \
     -v ~/docker/isaac-sim/cache/kit:/isaac-sim/kit/cache:rw \
     -v ~/docker/isaac-sim/cache/ov:/root/.cache/ov:rw \
     -v ~/docker/isaac-sim/cache/pip:/root/.cache/pip:rw \
