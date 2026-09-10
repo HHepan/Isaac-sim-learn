@@ -1,2 +1,11 @@
 # Isaac Sim 启动脚本（包含本地挂载路径配置）
-start-isaac.sh
+# start-isaac.sh
+
+# Isaac lab 仓库
+IsaacLab/
+
+# 本地资源文件夹
+assets/
+
+# 视频文件
+*.mp4
